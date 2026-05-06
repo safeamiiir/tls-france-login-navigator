@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "TLS France Login Navigator",
+  "version": "1.0",
+  "description": "Automates the navigation to France TLS login page",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://visas-fr.tlscontact.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TLS France Navigator"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

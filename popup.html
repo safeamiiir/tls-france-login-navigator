@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLS France Navigator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TLS France Navigator</h1>
+        <p class="info">Automate navigation to France TLS login page</p>
+        
+        <button id="startButton" class="btn btn-primary">Start Automation</button>
+        <button id="stopButton" class="btn btn-danger" disabled>Stop</button>
+        
+        <div id="status" class="status">
+            <p id="statusText">Ready to start</p>
+            <div id="stepsList" class="steps-list"></div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

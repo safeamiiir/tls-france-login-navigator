@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.info {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-danger {
+    background: #f56565;
+    color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+    background: #e53e3e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 101, 101, 0.4);
+}
+
+.btn-danger:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-top: 20px;
+    padding: 12px;
+    background: #f7fafc;
+    border-radius: 4px;
+    border-left: 4px solid #667eea;
+}
+
+#statusText {
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.steps-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+}
+
+.step {
+    padding: 6px 8px;
+    margin: 4px 0;
+    border-radius: 3px;
+    font-size: 12px;
+    animation: slideIn 0.3s ease;
+}
+
+.step.success {
+    background: #c6f6d5;
+    color: #22543d;
+    border-left: 3px solid #48bb78;
+}
+
+.step.error {
+    background: #fed7d7;
+    color: #742a2a;
+    border-left: 3px solid #f56565;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scrollbar styling */
+.steps-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.steps-list::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 3px;
+}
+
+.steps-list::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.steps-list::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
