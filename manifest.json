@@ -6,7 +6,9 @@
   "permissions": [
     "scripting",
     "activeTab",
-    "tabs"
+    "tabs",
+    "alarms",
+    "storage"
   ],
   "host_permissions": [
     "https://visas-fr.tlscontact.com/*"
