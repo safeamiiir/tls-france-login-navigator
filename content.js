@@ -22,10 +22,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             .then(() => sendResponse({success: true}))
             .catch(error => sendResponse({success: false, error: error.message}));
         return true;
-    } else if (request.action === 'checkLogin') {
-        // Single instant check: is a LOG IN button present right now? (the popup
-        // polls this repeatedly, so no internal waiting needed here)
-        sendResponse({success: true, hasLoginButton: !!findLoginButton()});
     }
 });
 
