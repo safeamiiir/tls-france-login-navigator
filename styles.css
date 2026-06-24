@@ -42,6 +42,12 @@ h1 {
     transition: all 0.3s ease;
 }
 
+.btn-large {
+    padding: 16px;
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
 .btn-primary {
     background: #667eea;
     color: white;
@@ -106,66 +112,102 @@ h1 {
     text-align: center;
 }
 
+.refresh-config {
+    margin-bottom: 10px;
+}
+
+.refresh-label {
+    display: block;
+    font-size: 12px;
+    color: #4a5568;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.interval-pool {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 4px;
+}
+
+.chip {
+    flex: 1 1 0;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    border: 1px solid #cbd5e0;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a5568;
+    background: white;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.15s ease;
+}
+
+.chip.selected {
+    background: #2f855a;
+    border-color: #2f855a;
+    color: white;
+}
+
+.interval-pool.disabled .chip {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* Spinning ring while actively working / watching */
+.indicator.working {
+    border: 2px solid #cbd5e0;
+    border-top-color: #667eea;
+    background: transparent;
+    animation: spin 0.8s linear infinite;
+}
+
+.indicator.idle {
+    background: #cbd5e0;
+}
+
+.indicator.done {
+    background: #48bb78;
+}
+
+/* Solid green while a random refresh is running. */
+.indicator.running {
+    background: #48bb78;
+}
+
+.indicator.error {
+    background: #f56565;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 #statusText {
     color: #333;
     font-size: 13px;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
-.steps-list {
-    max-height: 200px;
-    overflow-y: auto;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 10px;
-}
-
-.step {
-    padding: 6px 8px;
-    margin: 4px 0;
-    border-radius: 3px;
-    font-size: 12px;
-    animation: slideIn 0.3s ease;
-}
-
-.step.success {
-    background: #c6f6d5;
-    color: #22543d;
-    border-left: 3px solid #48bb78;
-}
-
-.step.error {
-    background: #fed7d7;
-    color: #742a2a;
-    border-left: 3px solid #f56565;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Scrollbar styling */
-.steps-list::-webkit-scrollbar {
-    width: 6px;
-}
-
-.steps-list::-webkit-scrollbar-track {
-    background: #e2e8f0;
-    border-radius: 3px;
-}
-
-.steps-list::-webkit-scrollbar-thumb {
-    background: #cbd5e0;
-    border-radius: 3px;
-}
-
-.steps-list::-webkit-scrollbar-thumb:hover {
-    background: #a0aec0;
-}

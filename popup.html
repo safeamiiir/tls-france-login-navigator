@@ -11,14 +11,31 @@
         <h1>TLS France Navigator</h1>
         <p class="info">Automate navigation to France TLS login page</p>
         
-        <button id="startButton" class="btn btn-primary">Start Automation</button>
-        <button id="startRefreshButton" class="btn btn-secondary">Start Random Refresh</button>
-        <button id="stopButton" class="btn btn-danger" disabled>Stop</button>
+        <button id="masterButton" class="btn btn-primary btn-large">Book an appointment</button>
+
+        <div class="refresh-config">
+            <span class="refresh-label">Random refresh picks one of these:</span>
+            <div class="interval-pool" id="intervalPool">
+                <button type="button" class="chip" data-value="1">1</button>
+                <button type="button" class="chip selected" data-value="2">2</button>
+                <button type="button" class="chip selected" data-value="3">3</button>
+                <button type="button" class="chip selected" data-value="4">4</button>
+                <button type="button" class="chip selected" data-value="5">5</button>
+                <button type="button" class="chip selected" data-value="6">6</button>
+                <button type="button" class="chip" data-value="7">7</button>
+                <button type="button" class="chip" data-value="8">8</button>
+                <button type="button" class="chip" data-value="9">9</button>
+                <button type="button" class="chip" data-value="10">10</button>
+            </div>
+        </div>
+        <button id="refreshToggleButton" class="btn btn-secondary">Start random refresh</button>
         <p id="refreshCountdown" class="countdown">Random refresh: Off</p>
-        
+
         <div id="status" class="status">
-            <p id="statusText">Ready to start</p>
-            <div id="stepsList" class="steps-list"></div>
+            <div class="status-row">
+                <span id="workIndicator" class="indicator idle"></span>
+                <p id="statusText">Ready to start</p>
+            </div>
         </div>
     </div>
     
