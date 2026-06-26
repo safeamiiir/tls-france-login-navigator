@@ -39,8 +39,9 @@ function setIndicator(state) {
 
 const LOGIN_PAGE_URL = 'https://visas-fr.tlscontact.com/en-us/country/gb/vac/gbLON2fr';
 const TRAVEL_GROUPS_URL = 'https://visas-fr.tlscontact.com/en-us/travel-groups';
-const SERVICE_LEVEL_URL = 'https://visas-fr.tlscontact.com/en-us/27133387/workflow/service-level';
-const APPOINTMENT_BOOKING_URL = 'https://visas-fr.tlscontact.com/workflow/appointment-booking/gbLON2fr/27133387';
+const SERVICE_LEVEL_URL = 'https://visas-fr.tlscontact.com/en-us/27394216/workflow/service-level';
+// TODO: This is not static, find a way to streer here using clicks
+const APPOINTMENT_BOOKING_URL = 'https://visas-fr.tlscontact.com/workflow/appointment-booking/gbLON2fr/27394216';
 
 // Booking flow state is shared with the background worker via storage (no
 // messaging round-trip needed — the background's tab listener reads this key).
